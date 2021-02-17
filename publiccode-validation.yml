@@ -1,0 +1,5 @@
+publiccode-parser:
+  image:
+    name: italia/publiccode-parser-go:v1.2.3
+    entrypoint: [""]
+  script: pcvalidate publiccode.yml
