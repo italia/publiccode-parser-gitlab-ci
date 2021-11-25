@@ -10,18 +10,28 @@ files using [publiccode-parser-go](https://github.com/italia/publiccode-parser-g
 
 You can use it in your workflow to check if `publiccode.yml` in your repo is valid.
 
-### Example
+### Examples
+
+#### Run automatically in the "`test`" stage (simplest configuration)
 
 ```yml
 # .gitlab-ci.yml
+
 include:
-  - remote: 'https://raw.githubusercontent.com/italia/publiccode-parser-gitlab-ci/main/publiccode-validation.yml'
-  
+  - https://raw.githubusercontent.com/italia/publiccode-parser-gitlab-ci/main/publiccode-validation.yml
+```
+
+#### Run in a custom stage
+
+```yml
+# .gitlab-ci.yml
+
+include:
+  - https://raw.githubusercontent.com/italia/publiccode-parser-gitlab-ci/main/publiccode-validation.yml
+
 stages:
-  - . . .
-  - publiccode-parser-gitlab-ci_stage
-  - . . .
-  
+  - custom_stage
+
 publiccode-parser:
-    stage: publiccode-parser-gitlab-ci_stage  
+  stage: custom_stage
 ```
