@@ -15,5 +15,13 @@ You can use it in your workflow to check if `publiccode.yml` in your repo is val
 ```yml
 # .gitlab-ci.yml
 include:
-  - https://raw.githubusercontent.com/italia/publiccode-parser-gitlab-ci/main/publiccode-validation.yml
+  - remote: 'https://raw.githubusercontent.com/italia/publiccode-parser-gitlab-ci/main/publiccode-validation.yml'
+  
+stages:
+  - . . .
+  - publiccode-parser-gitlab-ci_stage
+  - . . .
+  
+publiccode-parser:
+    stage: publiccode-parser-gitlab-ci_stage  
 ```
