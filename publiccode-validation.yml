@@ -1,5 +1,5 @@
 publiccode-parser:
   image:
-    name: italia/publiccode-parser-go:v4.3.3
+    name: italia/publiccode-parser-go:v4.3.6
     entrypoint: [""]
   script: publiccode-parser publiccode.yml
