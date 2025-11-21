@@ -1,6 +1,6 @@
 publiccode-parser:
   image:
     # renovate: datasource=docker depName=italia/publiccode-parser-go
-    name: italia/publiccode-parser-go:v5.2.1
+    name: italia/publiccode-parser-go:v5.2.2
     entrypoint: [""]
   script: publiccode-parser publiccode.yml
