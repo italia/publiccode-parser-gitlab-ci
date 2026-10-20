@@ -6,7 +6,7 @@
 
 This snippet can be included in GitLab CI to validate
 [`publiccode.yml`](https://github.com/italia/publiccode.yml)
-files using [publiccode-parser-go](https://github.com/italia/publiccode-parser-go).
+files using [libpubliccode](https://github.com/publiccodeyml/libpubliccode).
 
 You can use it in your workflow to check if `publiccode.yml` in your repo is valid.
 
